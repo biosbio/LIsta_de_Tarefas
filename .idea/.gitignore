@@ -1,0 +1,19 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Manter no controle de versão:
+.idea/codeStyles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/gradle.xml
+.idea/compiler.xml
+
+# Ignorar configurações locais específicas do desenvolvedor:
+.idea/workspace.xml
+.idea/libraries
+.idea/assetWizardSettings.xml
+.idea/assetRepositories.xml
+.idea/dictionaries
+.idea/shelf/
