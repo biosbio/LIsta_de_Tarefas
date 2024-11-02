@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">To_Do_List_App</string>
+    <string name="tv_emptyActitviy">Oops! You don\'t have any tasks!</string>
+    <string name="tv_tasks_activity_main">Tasks</string>
 </resources>
