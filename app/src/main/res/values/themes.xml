@@ -7,4 +7,7 @@
         <item name="colorSecondary">@color/black</item>
         <item name="colorOnSecondary">@color/white</item>
     </style>
+    <style name="ToolbarTitle" parent="@android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

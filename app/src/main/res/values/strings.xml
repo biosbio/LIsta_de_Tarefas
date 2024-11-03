@@ -2,4 +2,15 @@
     <string name="app_name">To_Do_List_App</string>
     <string name="tv_emptyActitviy">Oops! You don\'t have any tasks!</string>
     <string name="tv_tasks_activity_main">Tasks</string>
+    <string name="label_cancel" >Cancel</string>
+    <string name="label_tasks">Task</string>
+    <string name="label_description_new_task">New Task</string>
+    <string name="label_edit">Edit</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_title" >Title</string>
+    <string name="label_hour">Time</string>
+    <string name="label_date">Date</string>
+    <string name="salvar_tarefa">Save</string>
+
+
 </resources>
