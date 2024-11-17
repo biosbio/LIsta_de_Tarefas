@@ -33,7 +33,7 @@ class TarefasAdd : AppCompatActivity() {
 
     private fun setupButtons() {
         btnSave.setOnClickListener {
-            val newTask = Task(title = taskTitle?.text.toString(), data = taskDate.text.toString(), time = taskTime.text.toString())
+            val newTask = Task(title = taskTitle.text.toString(), data = taskDate.text.toString(), time = taskTime.text.toString())
             taskViewModel.insert(newTask)
 
             Intent(this, MainActivity::class.java).also{
