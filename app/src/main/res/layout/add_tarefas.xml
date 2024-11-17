@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         app:contentInsetStartWithNavigation="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_navegar">
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <TextView
             android:id="@+id/toolbar_title"
@@ -48,6 +48,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -69,11 +70,12 @@
         app:startIconDrawable="@drawable/ic_calendario">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusable="false"
             android:inputType="date"
-            android:paddingStart="48dp" />
+            android:paddingStart="48dp"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,6 +91,7 @@
         app:startIconDrawable="@drawable/ic_time">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusable="false"
@@ -104,12 +107,12 @@
         android:layout_height="wrap_content"
         android:text="@string/label_cancel"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@id/btn_novatarefa"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
         app:layout_constraintEnd_toEndOf="@id/end"
         app:layout_constraintStart_toStartOf="@id/start" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_novatarefa"
+        android:id="@+id/btn_save"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
