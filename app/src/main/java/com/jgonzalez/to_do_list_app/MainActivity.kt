@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-        binding.addFAB.setOnClickListener {
+        binding.addFab.setOnClickListener {
             Intent(this, TarefasAdd::class.java).also {
                 it.putExtra("EXTRA_TITLE", "valor" )
                 startActivity(it)
