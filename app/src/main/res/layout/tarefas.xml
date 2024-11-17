@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/tv_task_date"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -27,7 +27,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_task_title"
-        tools:text="01/01/2021 18:00" />
+        tools:text="01/01/2021" />
+    <TextView
+        android:id="@+id/tv_task_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/tv_task_date"
+        app:layout_constraintTop_toBottomOf="@id/tv_task_title"
+        tools:text="18:00" />
 
     <ImageButton
         android:id="@+id/ib_edit"
