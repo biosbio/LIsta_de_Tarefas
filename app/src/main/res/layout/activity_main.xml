@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_tasks_activity_main"
@@ -19,9 +20,22 @@
 
     <include
         android:id="@+id/include_emptyActivity"
+        android:visibility="visible"
         layout="@layout/empty_activity" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tv_task"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/tarefas"/>
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
