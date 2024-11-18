@@ -20,6 +20,7 @@ class TaskAdapter(
 
         val taskTitle : TextView = itemView.findViewById(R.id.tv_task_title)
         val taskData : TextView  = itemView.findViewById(R.id.tv_task_date)
+        val taskTime : TextView = itemView.findViewById(R.id.tv_task_time)
         val btnEdit  : ImageButton =itemView.findViewById(R.id.ib_edit)
         val btnDelete  : ImageButton =itemView.findViewById(R.id.ib_delete)
 
@@ -35,6 +36,7 @@ class TaskAdapter(
 
         holder.taskTitle.text = currentTask.title
         holder.taskData.text = currentTask.data
+        holder.taskTime.text = currentTask.time
         holder.btnEdit.setOnClickListener {
             onEditTask(currentTask)
         }
