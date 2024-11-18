@@ -103,6 +103,9 @@ class TarefasEdit : AppCompatActivity() {
                 Intent(this, MainActivity::class.java).also {
                     startActivity(it)
                 }
+
+                Toast.makeText(this, "Task updated successfully", Toast.LENGTH_SHORT).show()
+
             }
         }
 
