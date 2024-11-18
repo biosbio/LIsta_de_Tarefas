@@ -124,7 +124,7 @@ class TarefasEdit : AppCompatActivity() {
                      dialog.dismiss()
 
                  }
-                 .create()git
+                 .create()
 
             alertDialog.show()
         }
