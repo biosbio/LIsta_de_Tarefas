@@ -2,14 +2,18 @@ package com.jgonzalez.to_do_list_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.ViewStub
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.jgonzalez.to_do_list_app.adapter.TaskAdapter
 import com.jgonzalez.to_do_list_app.databinding.ActivityMainBinding
 import com.jgonzalez.to_do_list_app.model.Task
@@ -20,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val taskViewModel: TaskViewModel by viewModels()
     private lateinit var adapter: TaskAdapter
+    val include: ConstraintLayout by lazy { findViewById(R.id.include_emptyActivity) }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +35,9 @@ class MainActivity : AppCompatActivity() {
 
         adapter = TaskAdapter(
             onEditTask = { task ->
-                Intent(this, TarefasAdd::class.java).also {
+                Intent(this, TarefasEdit::class.java).also {
+                    it.putExtra("EXTRA_ID", task.id)
+                    it.putExtra("EXTRA_TITLE", task.title)
                     startActivity(it)
                 }
             },
@@ -45,13 +53,22 @@ class MainActivity : AppCompatActivity() {
         binding.recycleView.adapter = adapter
 
         taskViewModel.allTasks.observe(this, Observer { tasks ->
-            tasks?.let { adapter.setTask(it) }
+            if(!tasks.isNullOrEmpty()) {
 
+                adapter.setTask(tasks)
+                binding.recycleView.visibility = RecyclerView.VISIBLE
+                include.visibility = ConstraintLayout.GONE
+
+            } else {
+                binding.recycleView.visibility = RecyclerView.GONE
+                include.visibility = ConstraintLayout.VISIBLE
+            }
         })
+
+
 
         binding.addFab.setOnClickListener {
             Intent(this, TarefasAdd::class.java).also {
-                it.putExtra("EXTRA_TITLE", "valor" )
                 startActivity(it)
             }
         }
