@@ -7,6 +7,8 @@ import android.view.ViewStub
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.annotation.ReturnThis
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
@@ -19,7 +21,10 @@ import com.jgonzalez.to_do_list_app.databinding.ActivityMainBinding
 import com.jgonzalez.to_do_list_app.model.Task
 import com.jgonzalez.to_do_list_app.viewmodel.TaskViewModel
 
-class MainActivity : AppCompatActivity() {
+class
+
+
+MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val taskViewModel: TaskViewModel by viewModels()
@@ -42,9 +47,18 @@ class MainActivity : AppCompatActivity() {
                 }
             },
             onDeleteTask = { task ->
-
-
-                deleteTask(task)
+                val dialog = AlertDialog.Builder(this)
+                    .setTitle("Delete Task")
+                    .setMessage("¿Do you want to delete?")
+                    .setPositiveButton("Delete") {dialog, _ ->
+                        deleteTask(task)
+                        dialog.dismiss()
+                    }
+                    .setNegativeButton("Cancel") {dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    .create()
+                dialog.show()
 
             }
         )
