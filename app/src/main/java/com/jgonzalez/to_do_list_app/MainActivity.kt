@@ -49,7 +49,7 @@ MainActivity : AppCompatActivity() {
             onDeleteTask = { task ->
                 val dialog = AlertDialog.Builder(this)
                     .setTitle("Delete Task")
-                    .setMessage("¿Do you want to delete?")
+                    .setMessage("Do you want to delete?")
                     .setPositiveButton("Delete") {dialog, _ ->
                         deleteTask(task)
                         dialog.dismiss()

@@ -49,7 +49,7 @@ class TarefasEdit : AppCompatActivity() {
 
             TimePickerDialog(this, { _, selectedHour, selectedMinute ->
 
-                val formattedTime = String.format("%02d:%02d", selectedHour, selectedMinute)
+                val formattedTime = String.format("%02d:%02d",  selectedHour, selectedMinute)
                 taskTime.setText(formattedTime)
 
             }, hour, minute, true).show()
@@ -66,7 +66,7 @@ class TarefasEdit : AppCompatActivity() {
 
             DatePickerDialog(this, { _, selectedYear, selectedMonth, selectedDay ->
 
-                val formattedDate = String.format("%02d/%02d/%04d", selectedDay, selectedMonth + 1, selectedYear)
+                val formattedDate = String.format("%02d/%02d/%04d",selectedDay, selectedMonth + 1, selectedYear)
                 taskDate.setText(formattedDate)
 
             }, year, month, day).show()
@@ -130,6 +130,7 @@ class TarefasEdit : AppCompatActivity() {
                  .create()
 
             alertDialog.show()
+
         }
     }
 }
