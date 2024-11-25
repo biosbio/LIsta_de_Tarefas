@@ -21,6 +21,7 @@
     <include
         android:id="@+id/include_emptyActivity"
         android:visibility="visible"
+
         layout="@layout/empty_activity" />
 
     <androidx.recyclerview.widget.RecyclerView

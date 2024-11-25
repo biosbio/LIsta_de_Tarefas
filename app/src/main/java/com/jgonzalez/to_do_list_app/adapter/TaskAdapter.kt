@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.jgonzalez.to_do_list_app.R
@@ -21,8 +22,8 @@ class TaskAdapter(
         val taskTitle : TextView = itemView.findViewById(R.id.tv_task_title)
         val taskData : TextView  = itemView.findViewById(R.id.tv_task_date)
         val taskTime : TextView = itemView.findViewById(R.id.tv_task_time)
-        val btnEdit  : ImageButton =itemView.findViewById(R.id.ib_edit)
-        val btnDelete  : ImageButton =itemView.findViewById(R.id.ib_delete)
+        val btnEdit  : ImageView =itemView.findViewById(R.id.ib_edit)
+        val btnDelete  : ImageView =itemView.findViewById(R.id.ib_delete)
 
     }
 
