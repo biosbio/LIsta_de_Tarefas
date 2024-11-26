@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">To_Do_List_App</string>
+    <string name="app_name">Lista de Tarefas</string>
     <string name="tv_emptyActitviy">Ops! Você não possui nenhuma tarefa</string>
     <string name="tv_tasks_activity_main">Tarefas</string>
     <string name="label_cancel" >Cancelar</string>

@@ -45,11 +45,9 @@
 
     <ImageView
         android:id="@+id/ib_edit"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:padding="-10dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_edit"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/pencil"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ib_delete"
         app:layout_constraintHorizontal_bias="0.5"
@@ -59,12 +57,10 @@
 
     <ImageView
         android:id="@+id/ib_delete"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:backgroundTint="#E1E8EEFF"
-        android:padding="-10dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_deletar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        android:src="@drawable/delete_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
