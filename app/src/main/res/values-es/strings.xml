@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lista de Tareas</string>
+    <string name="tv_emptyActitviy">¡Ups! No tienes ninguna tarea</string>
+    <string name="tv_tasks_activity_main">Tareas</string>
+    <string name="label_cancel">Cancelar</string>
+    <string name="label_tasks">Tareas</string>
+    <string name="label_description_new_task">Nueva Tarea</string>
+    <string name="label_edit">Editar</string>
+    <string name="label_delete">Eliminar</string>
+    <string name="label_title">Título</string>
+    <string name="label_hour">Hora</string>
+    <string name="label_date">Fecha</string>
+    <string name="salvar_tarefa">Guardar</string>
+    <string name="empty_task_title">El campo del título está vacío</string>
+    <string name="empty_task_date">El campo de la fecha está vacío</string>
+    <string name="empty_task_time">El campo de la hora está vacío</string>
+    <string name="saved_sucess">Tarea guardada con éxito</string>
+    <string name="cancel_alert_dialog">¿Deseas cancelar?</string>
+    <string name="confirm_alert">Sí</string>
+    <string name="cancel_alert">No</string>
+    <string name="delete_task">Eliminar Tarea</string>
+    <string name="delete_task_dialog">¿Deseas eliminar?</string>
+    <string name="confirm_delete">Sí</string>
+    <string name="cancel_delete">No</string>
+    <string name="delete_sucess">Tarea eliminada con éxito</string>
+
+
+
+</resources>

@@ -11,6 +11,27 @@
     <string name="label_hour">Time</string>
     <string name="label_date">Date</string>
     <string name="salvar_tarefa">Save</string>
+    <string name="empty_task_title">Title label is empty</string>"
+    <string name="empty_task_date">Date label is empty</string>"
+    <string name="empty_task_time">Time label is empty</string>"
+    <string name="saved_sucess">Task saved Sucessfully</string>
+    <string name="cancel_alert_dialog">Do you want to cancel</string>"
+    <string name="confirm_alert">Yes</string>"
+    <string name="cancel_alert">No</string>"
+
+    <string name="delete_task">Delete Task</string>"
+    <string name="delete_task_dialog">Do you want to delete?</string>"
+    <string name="confirm_delete">Yes</string>"
+    <string name="cancel_delete">No</string>"
+    <string name="delete_sucess">Task deleted successfully</string>
+
+
+
+
+
+
+
+
 
 
 </resources>

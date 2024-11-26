@@ -76,16 +76,16 @@ class TarefasEdit : AppCompatActivity() {
     private fun setupButtons(taskId: Int) {
         btnSave.setOnClickListener {
 
-            if (taskTitle.text.toString() == "") {
-                Toast.makeText(this, "Title label is empty", Toast.LENGTH_SHORT).show()
+            if (taskTitle.text.toString().isEmpty()) {
+                Toast.makeText(this, getString(R.string.empty_task_title), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (taskDate.text.toString() == "") {
-                Toast.makeText(this, "Date label is empty", Toast.LENGTH_SHORT).show()
+            if (taskDate.text.toString().isEmpty()) {
+                Toast.makeText(this, getString(R.string.empty_task_date), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (taskTime.text.toString() == "") {
-                Toast.makeText(this, "Time label is empty", Toast.LENGTH_SHORT).show()
+            if (taskTime.text.toString().isEmpty()) { 
+                Toast.makeText(this, getString(R.string.empty_task_time), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -104,7 +104,7 @@ class TarefasEdit : AppCompatActivity() {
                     startActivity(it)
                 }
 
-                Toast.makeText(this, "Task updated successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.saved_sucess), Toast.LENGTH_SHORT).show()
 
             }
         }
@@ -113,16 +113,16 @@ class TarefasEdit : AppCompatActivity() {
         btnCancel.setOnClickListener {
 
              val alertDialog = AlertDialog.Builder(this)
-                 .setTitle("Cancel")
-                 .setMessage("Do you want to cancel")
-                 .setPositiveButton("Confirm") {dialog,_ ->
+                 .setTitle(getString(R.string.label_cancel))
+                 .setMessage(getString(R.string.cancel_alert_dialog))
+                 .setPositiveButton(getString(R.string.confirm_alert)) {dialog,_ ->
                     Intent(this, MainActivity::class.java).also {
                         startActivity(it)
                     }
 
                      dialog.dismiss()
                  }
-                 .setNegativeButton("Cancel") {dialog,_ ->
+                 .setNegativeButton(getString(R.string.cancel_alert)) {dialog,_ ->
 
                      dialog.dismiss()
 

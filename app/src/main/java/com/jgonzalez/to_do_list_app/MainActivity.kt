@@ -32,7 +32,6 @@ MainActivity : AppCompatActivity() {
     private lateinit var adapter: TaskAdapter
     val include: RelativeLayout by lazy { findViewById(R.id.include_emptyActivity) }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -49,18 +48,17 @@ MainActivity : AppCompatActivity() {
             },
             onDeleteTask = { task ->
                 val dialog = AlertDialog.Builder(this)
-                    .setTitle("Delete Task")
-                    .setMessage("Do you want to delete?")
-                    .setPositiveButton("Delete") {dialog, _ ->
+                    .setTitle(getString(R.string.delete_task))
+                    .setMessage(getString(R.string.delete_task_dialog))
+                    .setPositiveButton(getString(R.string.confirm_delete)) { dialog, _ ->
                         deleteTask(task)
                         dialog.dismiss()
                     }
-                    .setNegativeButton("Cancel") {dialog, _ ->
+                    .setNegativeButton(getString(R.string.cancel_delete)) { dialog, _ ->
                         dialog.dismiss()
                     }
                     .create()
                 dialog.show()
-
             }
         )
 
@@ -68,7 +66,7 @@ MainActivity : AppCompatActivity() {
         binding.recycleView.adapter = adapter
 
         taskViewModel.allTasks.observe(this, Observer { tasks ->
-            if(!tasks.isNullOrEmpty()) {
+            if (!tasks.isNullOrEmpty()) {
 
                 adapter.setTask(tasks)
                 binding.recycleView.visibility = RecyclerView.VISIBLE
@@ -80,8 +78,6 @@ MainActivity : AppCompatActivity() {
             }
         })
 
-
-
         binding.addFab.setOnClickListener {
             Intent(this, TarefasAdd::class.java).also {
                 startActivity(it)
@@ -92,6 +88,6 @@ MainActivity : AppCompatActivity() {
 
     private fun deleteTask(task: Task) {
         taskViewModel.delete(task)
-        Toast.makeText(this, "Task deleted successfully", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.delete_sucess), Toast.LENGTH_SHORT).show()
     }
 }

@@ -12,5 +12,20 @@
     <string name="label_hour">Hora</string>
     <string name="label_date">Data</string>
     <string name="salvar_tarefa">Salvar</string>
+    <string name="empty_task_title">O campo do título está vazio</string>
+    <string name="empty_task_date">O campo da data está vazio</string>
+    <string name="empty_task_time">O campo da hora está vazio</string>
+    <string name="saved_sucess">Tarefa salva com sucesso</string>
+    <string name="cancel_alert_dialog">Você deseja cancelar?</string>
+    <string name="confirm_alert">Sim</string>
+    <string name="cancel_alert">Não</string>
+    <string name="delete_task">Deletar Tarefa</string>
+    <string name="delete_task_dialog">Você deseja deletar?</string>
+    <string name="confirm_delete">Sim</string>
+    <string name="cancel_delete">Não</string>
+    <string name="delete_sucess">Tarefa deletada com sucesso</string>
+
+
+
 
 </resources>
