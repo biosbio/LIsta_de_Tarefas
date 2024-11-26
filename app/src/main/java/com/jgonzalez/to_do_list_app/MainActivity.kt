@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.ViewStub
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -30,7 +31,7 @@ MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val taskViewModel: TaskViewModel by viewModels()
     private lateinit var adapter: TaskAdapter
-    val include: RelativeLayout by lazy { findViewById(R.id.include_emptyActivity) }
+    val include: LinearLayout by lazy { findViewById(R.id.include_emptyActivity) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
