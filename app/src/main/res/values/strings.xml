@@ -15,7 +15,7 @@
     <string name="empty_task_date">Date label is empty</string>"
     <string name="empty_task_time">Time label is empty</string>"
     <string name="saved_sucess">Task saved Sucessfully</string>
-    <string name="cancel_alert_dialog">Do you want to cancel</string>"
+    <string name="cancel_alert_dialog">Do you want to cancel?</string>"
     <string name="confirm_alert">Yes</string>"
     <string name="cancel_alert">No</string>"
 
