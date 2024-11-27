@@ -31,8 +31,14 @@ class TarefasEdit : AppCompatActivity() {
 
         val extraId = intent.getIntExtra("EXTRA_ID", 0)
         val extraTitle = intent.getStringExtra("EXTRA_TITLE")
+        val extraDate = intent.getStringExtra("EXTRA_DATE")
+        val extraTime = intent.getStringExtra("EXTRA_TIME")
         val factoryExtraTitle = Editable.Factory.getInstance().newEditable(extraTitle)
+        val factoryExtraDate = Editable.Factory.getInstance().newEditable(extraDate)
+        val factoryExtraTime = Editable.Factory.getInstance().newEditable(extraTime)
         taskTitle.text = factoryExtraTitle
+        taskDate.text = factoryExtraDate
+        taskTime.text = factoryExtraTime
 
 
         setupButtons(extraId)
