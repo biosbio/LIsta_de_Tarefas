@@ -35,16 +35,16 @@ class TarefasAdd : AppCompatActivity() {
     private fun setupButtons() {
         btnSave.setOnClickListener {
             // Verificar se os campos estão vazios
-            if (taskTime.text.toString().isEmpty()) {
-                Toast.makeText(this, getString(R.string.empty_task_time), Toast.LENGTH_SHORT).show()
+            if (taskTitle.text.toString().isEmpty()) {
+                Toast.makeText(this, getString(R.string.empty_task_title), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             if (taskDate.text.toString().isEmpty()) {
                 Toast.makeText(this, getString(R.string.empty_task_date), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (taskTitle.text.toString().isEmpty()) {
-                Toast.makeText(this, getString(R.string.empty_task_title), Toast.LENGTH_SHORT).show()
+            if (taskTime.text.toString().isEmpty()) {
+                Toast.makeText(this, getString(R.string.empty_task_time), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
