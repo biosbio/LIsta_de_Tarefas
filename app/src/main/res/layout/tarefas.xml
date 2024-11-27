@@ -1,4 +1,5 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,13 +9,13 @@
     android:padding="16dp">
 
     <TextView
-
         android:id="@+id/tv_task_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginStart="5dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,8 +27,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/ib_edit"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_task_title"
         tools:text="01/01/2021" />
@@ -45,26 +45,21 @@
 
     <ImageView
         android:id="@+id/ib_edit"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:src="@drawable/pencil"
+        android:layout_marginRight="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ib_delete"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ib_delete"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:src="@drawable/delete_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ib_edit"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -72,6 +67,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="236dp" />
+        app:layout_constraintGuide_percent="0.75" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
