@@ -47,7 +47,7 @@
         android:id="@+id/ib_edit"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/pencil"
+        android:src="@drawable/ic_edit"
         android:layout_marginRight="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ib_delete"
@@ -55,9 +55,9 @@
 
     <ImageView
         android:id="@+id/ib_delete"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/delete_1"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/ic_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
